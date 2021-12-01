@@ -1,0 +1,288 @@
+@chraset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background-color: black;
+	color: white;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-image: url('1920x1440.jpg');
+  color:white;
+  padding: 15px;
+  height: 600px;
+  font-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+.blue{
+	color: blue;
+}
+.red{
+	color: red;
+}
+.header button{
+	font-weight: bold;
+	width: 100px;
+	height: 30px;
+	border-top: 1px solid blue;
+	border-bottom: 1px solid blue;
+	border-left: 1px solid red;
+    border-right: 1px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.topic{
+	position: relative;
+	top: 40px;
+}
+.header button:hover{
+	background-image:linear-gradient(rgb(17, 0, 255),rgb(247, 4, 4));
+  color:white;
+}
+.menu0{
+	display: none;
+}
+.nav{
+	text-align: right;
+
+
+}
+.nav ul{
+	list-style-type: none;
+}
+.nav ul li{
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-right: 2px solid white;
+}
+.nav ul li:last-child{
+	border: none;
+}
+.nav ul li a{
+	font-family: arial;
+	color:  #fcfbfa;
+  
+
+	font-size: 25px;
+	font-weight: bold;
+}
+.nav ul li a:hover{
+	color: rgb(255, 0, 21);
+	text-decoration: underline;
+}
+.menu p{
+	font-size: 25px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color:blue;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu ul li a{
+	color: white;
+}
+
+.menu li:hover {
+  background-color:red;
+  color:#ffffff;
+}  
+
+.row{
+  background-color: rgb(54, 53, 53);
+}
+
+.col-6{
+	   line-height: 25px;
+	   text-align: justify;
+}
+.col-6 img{
+         width: 150px;
+         height: 150px;
+         opacity: 0.8;
+}
+.tab img{
+  display: none;
+}
+.col-6 img:hover{
+	opacity: 1;
+}
+
+.aside {
+  margin-top: 10px;
+  background-color:blue;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+{
+
+         background-image: linear-gradient(black,white);
+
+}
+.menu3 img{
+        width:25px;
+}
+.middle{
+text-align: center;
+}
+ .col-4{
+
+ }
+ .col-4 ul li{
+   list-style: none;
+ }
+.col-4 ul li a{
+  text-align: center;
+  color:white;
+  line-height: 40px;
+  font-size:20px;
+}
+.col-4 ul li a:hover{
+  color:red;
+  text-decoration: underline;
+}
+.right1{
+  text-align: center;
+ 
+}
+.right1 img{
+              width:100px;
+              opacity: 0.8;
+             
+}
+.right1 img:hover{
+  opacity: 1;
+}
+.footer{
+  text-align: center;
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+  .aside{
+  	background-color:blue;
+  	margin-top: 0;
+
+  }
+  .menu0{
+		display: inline-block;
+    color: white;
+    position: absolute;
+    left: 15px;
+	}
+  .nav ul li a{
+    display: none;
+  }
+.col-6 .tab img{
+                display: inline-block;        
+}
+.menu3{
+  text-align: center;
+}
+}
+@media only screen and (max-width:420px){
+  .col-6 .tab img{
+    display: none;
+  }
+  .col-6 {
+    text-align: center;
+  }
+}
+
+/* sidenavi */
+.sidenav{
+  
+  
+  width: 0;
+  height: 56.5%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color:blue;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-bottom:50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color:rgb(129, 114, 114);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:red;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
